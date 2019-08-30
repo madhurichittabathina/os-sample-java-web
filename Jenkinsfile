@@ -7,5 +7,10 @@ pipeline {
         git(url: 'https://github.com/madhurichittabathina/os-sample-java-web.git', branch: 'master')
       }
     }
+    stage('build') {
+      steps {
+        bat 'mvn install'
+      }
+    }
   }
 }
